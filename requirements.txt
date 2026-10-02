@@ -1,0 +1,16 @@
+datasets
+torch==2.10.0
+torchvision==0.25.0
+transformers>=5.0.0
+qwen-vl-utils
+accelerate
+pillow
+numpy
+matplotlib
+pyyaml
+rouge-score
+absl-py
+nltk
+opencv-contrib-python-headless
+scikit-learn
+tqdm

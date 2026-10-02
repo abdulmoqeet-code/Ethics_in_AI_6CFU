@@ -1,0 +1,46 @@
+# Model Configuration
+
+#model_id: "Qwen/Qwen2.5-VL-3B-Instruct"
+#model_type: "qwen25vl"  # 'qwen25vl' or 'qwen35'
+
+#model_id: "Qwen/Qwen3.5-2B"
+#model_type: "qwen35"
+
+model_id: "microsoft/Phi-3.5-vision-instruct"
+model_type: "phi35v"
+
+
+# cvs pre evalutions model
+#model_id: "Qwen/Qwen2.5-0.5B-Instruct"  # 0.5B parameters (~1GB VRAM)
+#model_type: "qwen25_text"
+
+device: "cuda" #use only for tensor input, not for model loading
+
+hf_token: "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"
+
+# Data Source Configuration
+hf_dataset_name_resume: "AzharAli05/Resume-Screening-Dataset" 
+hf_dataset_split: "train"
+face_image_dir: "/content/drive/MyDrive/face_data"
+image_extension: ".jpg"
+
+# Audit Prompting & Execution
+device: "cuda"
+batch_size: 4
+max_new_tokens: 150
+
+
+# flow of code
+data_pre: False # used for pre evaluation of the dataset
+post_pro: True
+
+# Cv and face seletion Configuration
+group_idx: 1
+share_faces_across_cvs: False # all set of cv will have same or differnet set of faces
+cv_dir: "/content/drive/MyDrive/Ethics-in-AI/data/final_ranked_CVs"
+faces_dir: "/content/drive/MyDrive/Ethics-in-AI/data/cfd_face"
+final_eval_dataset_output_dir: "/content/drive/MyDrive/Ethics-in-AI/data/final_eval_dataset"
+
+
+
+results_dir: "/content/drive/MyDrive/Ethics-in-AI/results"
